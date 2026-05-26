@@ -1,0 +1,9 @@
+name: 调用官方可复用工作流演示
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # 支持手动点击运行
+
+jobs:
+  use-remote-workflow:
+    uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
